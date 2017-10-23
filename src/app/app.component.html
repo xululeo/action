@@ -1,0 +1,15 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <a [routerLink]="['/one']" [queryParams]="{id:1}"> 点击生成第一个商品</a>
+  <a [routerLink]="['/two']"> 点击生成第二个商品</a>
+  <a [routerLink]="[{outlets: {extra:'chat'} }]">开启辅助路由</a>
+  <a [routerLink]="[{outlets: {extra:null} }]">关闭辅助路由</a>
+  <button (click)="getTwoProduct()"> 点击进入第二页</button>
+  <router-outlet></router-outlet>
+  <router-outlet name="extra"></router-outlet>
+</div>
+
+
